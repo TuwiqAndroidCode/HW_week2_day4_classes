@@ -12,7 +12,7 @@ Methods:<br />
 int numberOfStudents()<br />
 boolean assignProfessor(Professor p) // assign professor to course. Course can have only one professor.<br />
 string professorName() // return professor full name<br />
-boolean enroll(Student s) // assign student to this course. Student can’t be enrolled to a course if the course is full.<br />
+boolean enroll(Student s) // assign student to this course. Student can’t be enrolled to a course if the course has 20 studens <br />
 string courseInfo() // return the course name number of lectures professor and students<br />
 <br />
 ### Professor <br />
