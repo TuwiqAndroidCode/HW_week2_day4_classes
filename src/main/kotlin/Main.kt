@@ -1,5 +1,26 @@
 fun main(args: Array<String>) {
 
+    var c = Course()
+    var s = Student ()
+    var p = Professor()
+
+    // p values
+    p.firstName = "Ali"
+    p.lastName = "Mohammed"
+    p.telephone = "05465453"
+    p.courses = "CS101"
+
+    // s values
+    s.firstName = "JANA"
+    s.lastName = "AlSalem"
+    s.courses = "CS101"
+
+    // c valuse
+    c.CourseName = "CS101"
+    c.students = (s)
+    c.number_of_lectures = 1
+    c.professor = p
+
 
 
 } // end main
