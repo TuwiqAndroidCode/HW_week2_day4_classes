@@ -2,22 +2,31 @@ fun main() {
 
     fun main() {
         var course = Course()
-        var professor=Professor()
-        var student= Professor.Student()
+        course.courseName="Arabic"
+        course.numberOflectures=10
+        course.students
+        course.professor
+        var listOfcourse= mutableListOf<String>("Arabic, Math, History")
+        fun listOfcourse(courseName:String){
+            listOfcourse.add(courseName)
 
+        }
+         println(listOfcourse)
+
+
+
+
+        var professor=Professor()
         professor.firstName="Zamel "
         professor.lastName="Mohammed"
         professor.courses11
         println("the professor : ${professor.firstName} ${professor.lastName}")
 
-        course.courseName="Arabic"
-        course.numberOflectures=10
-        course.students
-        course.professor
+        var student= Professor()
 
         student.firstName="Faisal"
         student.lastName="Nahi"
-        student.courses
+        student.courses11
         println("student name : ${student.firstName}${student.lastName}")
 
         println("course is ${course.courseName}")
@@ -32,30 +41,25 @@ fun main() {
     }
 
     class Professor {
-        var firstName:String="Zamel"
-        var lastName:String="Mohammed"
-        val courses11 :String= " English , Math "
-        // val telephone:String
-        //   get() {
-        //     dTODO()
-        //  }
+        var firstName: String = "Zamel"
+        var lastName: String = "Mohammed"
+        val courses11: String = " English , Math "
 
+    }
         class Student {
             var firstName :String="Faisal"
             var lastName:String="Nahi "
-            val courses:String="English, Math"
+            val courses1:String="English, Math"
 
         }
-
-    }
-
-
-}
 
 class Course {
     var courseName:String= "Arabic"
     var numberOflectures:Int=10
     val students:String = "Faisal,ALi,Sam"
     val professor:String = "Zamel"
+
+    var listOfcourse= mutableListOf<String>("Arabic, Math, History")
+
 
 }
