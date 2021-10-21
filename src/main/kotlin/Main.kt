@@ -9,17 +9,20 @@ fun main(args: Array<String>) {
     p.lastName = "Mohammed"
     p.telephone = "05465453"
     p.courses = "CS101"
+    p.PtintNameOfProfessor()
 
     // s values
     s.firstName = "JANA"
     s.lastName = "AlSalem"
     s.courses = "CS101"
+    s.PtintNameOfStudent()
 
     // c valuse
     c.CourseName = "CS101"
-    c.students = (s)
+    //c.students = (s)
     c.number_of_lectures = 1
     c.professor = p
+    c.courseInfo()
 
 
 
@@ -30,10 +33,10 @@ class Course {
     var number_of_lectures = 0
     var students = mutableListOf<Student>()
     var professor = Professor()
-
+    var sizeSTU = Student().STU
 
     fun numberOfStudents() {
-        var NumberOfSTU = students.size
+        var NumberOfSTU = sizeSTU.size
     } // end Number of stu
 
     fun assignProfessor(p: Professor) {
@@ -56,12 +59,12 @@ class Course {
             println("Can't add new stu, the cours is fully !!")
     }
 
-    fun courseInfo(): String {
+    fun courseInfo() {
 
-        return "The Course Name is :$CourseName " +
+        println( "The Course Name is :$CourseName " +
                 "and number of lec :$number_of_lectures" +
                 "Students names are: $students " +
-                "Professor is : $professor"
+                "Professor is : $professor")
     }
 } // end class Course
 
@@ -84,6 +87,10 @@ class Student {
     var firstName = ""
     var lastName = ""
     var courses = ""
+    var STU = mutableListOf<String>(firstName,lastName,courses)
+
+
+
 
 
     fun PtintNameOfStudent() {
