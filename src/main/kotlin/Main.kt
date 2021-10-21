@@ -26,9 +26,9 @@ fun main(args: Array<String>) {
     FCourse.numberOfStudents()
 
 // assign professor to course. Course can have only one professor
-    FCourse.assignProfessor("Omar")
+    FCourse.assignProfessor(FProfessor)
     println(FCourse.listOfProfessor)
-    FCourse.assignProfessor("Hussain")
+    FCourse.assignProfessor(FProfessor)
 
 // return the course name number of lectures professor and students
     FCourse.courseInfo()
@@ -50,9 +50,9 @@ class Course(var ProfessorFullName :String ,  var CourseName :String){
     fun numberOfStudents(){ println(students) }
 
 // assign professor to course. Course can have only one professor.
-    fun  assignProfessor(professorName: String){
-       if (listOfProfessor.size==1){ println("The course already have a professor")}
-        else   listOfProfessor.add(professorName) }
+    fun  assignProfessor(professorName: Professor) {
+       if (listOfProfessor.size==0){  listOfProfessor.add("$professorName")}
+        else   println("The course already have a professor") }
 
 // return professor full name
     fun professorName(): String {
