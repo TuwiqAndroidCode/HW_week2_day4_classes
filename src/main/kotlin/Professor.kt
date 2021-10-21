@@ -2,7 +2,10 @@ class Professor( ) {
 
    var firstName =""
    var lastName =""
-   var telephone=""
+    var telephone = ""
+    set(value) {
+        if (value.length == 10) field = value else println("Enter a valid number")
+    }
     var courses = mutableListOf<String>()
     constructor(firstName: String, lastName: String, telephone: String): this() {
         this.firstName = firstName
