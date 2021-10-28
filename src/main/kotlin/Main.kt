@@ -1,5 +1,12 @@
 fun main() {
+/*
 
+
+In professorName you don’t need to add a parameter
+You need to create a List of student
+In enroll function you will add a student to the list
+In numberOfStudents fun you will take the size of the list
+ */
 
     var co = Course()
 
@@ -9,8 +16,12 @@ fun main() {
     co.students
     co.professor= "Zemal"
 
+var s = Student ()
+    s.firstName =  "reem"
+    s.lastName = "Alanazi"
+   co.enroll(s)
 
-    //
+    //input
     println( co.professorName("Reem", " Fawaz"))
     co.courseInfo("math",50,"zemal",19)
     co.enroll()
@@ -25,6 +36,7 @@ fun main() {
 
     class Course {
 
+        var listOfStudent =  mutableListOf<String>("reem","Ali","Ahmad")
 
         var CourseName: String = ""
         var number_of_lectures: Int = 0
@@ -61,7 +73,7 @@ fun main() {
         }
 
         private var Student : Int = 20
-        fun enroll(Student: Boolean) {
+        fun enroll(s: Student) {
             var Student : Int = 20
 
             if (Student <= 20)
@@ -71,6 +83,7 @@ fun main() {
                 println("CAN NOT")}
 
         fun enroll():Int {
+
             return Student
         }
 
@@ -83,9 +96,9 @@ fun main() {
         var courses : String = ""
         var telephone : Int = 0
 
-        fun professorName (firstName : String,lastName : String) : String{
+        fun professorName () : String{
 
-            return firstName + lastName
+
         }
 
 
@@ -93,9 +106,11 @@ fun main() {
 
     class Student {
 
+
         var firstName : String = ""
         var lastName : String = ""
         var courses : String = ""
+
 
         fun studentName (firstName : String,lastName : String): String {
 
